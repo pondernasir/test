@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    color:white ;
+}
+body{
+  background-color: rgba(0, 0, 0, 0.855);
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 75px 74px;
+}
+nav{
+    display: flex;
+    width:80%;
+    margin: 50px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .name{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(20px,8vw,45px);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Bebas Neue", sans-serif;
+    z-index: 1;
+}
+nav .name span{
+    pointer-events: none;
+    font-size: clamp(10px,5vw,20px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+    color:rgba(255, 255, 255, 0.242);
+    margin-top: -5px;
+    z-index: 1;
+}
+nav .links{
+    display: flex;
+}
+nav .links a{
+    margin:auto 15px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+nav .links a:hover{
+    color:orange;
+    transition: .75s;
+}
+nav .menuBtn{
+    display: none;
+    flex-direction: column;
+    height: 18px;
+    width:18px;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    z-index: 1;
+}
+nav .menuBtn div{
+    background-color: white;
+    height: 2px;
+    width:100%;
+}
+footer{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    bottom: 0;
+    font-family: "Bebas Neue", sans-serif;
+    color:rgba(255, 255, 255, 0.242);
+    letter-spacing: 2.5px;
+    margin:10px;
+    z-index: 1;
+    pointer-events: none;
+}
+@media(max-width:1204px){ /*show menu button*/
+    nav .links{
+        display: none;
+    }
+    nav .links.x{
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.855);
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    nav .links .links_box.x{
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        align-items: center;
+    }
+    nav .links a{
+        font-size: 50px;
+    }
+    nav .menuBtn{
+        display: flex;
+    }
+    nav .menuBtn.x{
+        align-items: flex-start;
+    }
+}
