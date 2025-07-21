@@ -82,6 +82,9 @@ footer{
     pointer-events: none;
 }
 @media(max-width:1204px){ /*show menu button*/
+    body.x{
+        overflow: hidden;
+    }
     nav .links{
         display: none;
     }
@@ -95,7 +98,6 @@ footer{
         height: 100vh;
         justify-content: center;
         align-items: center;
-        overflow-x: hidden;
     }
     nav .links .links_box.x{
         display: flex;
